@@ -5,17 +5,17 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Skateboards from './pages/Skateboards';
 
+const App = () => {
+  const URL = 'https://skate-react.herokuapp.com/'
 
-
-function App() {
   return (
     <div className="App">
       <Header />
       <main> 
       <Routes> 
         <Route path="/" element={<Home />} exact/>
-        <Route path="/skateboards" element={<Skateboards />} />
-        <Route path="/skateboards/:id" element={<Skateboards />} />
+        <Route path="/skateboards" element={<Skateboards URL={URL} />} />
+        <Route path="/skateboards/:id" element={<Skateboards URL={URL} />} />
       </Routes>
       </main>
       <Footer />
