@@ -16,14 +16,11 @@ function App() {
         <Route path="/" element={<Home />} exact/>
         <Route path="/skateboards" element={<Skateboards />} />
         <Route path="/skateboards/:id" element={<Skateboards />} />
-
-
       </Routes>
       </main>
       <Footer />
-
     </div>
   );
-}
+};
 
 export default App;
