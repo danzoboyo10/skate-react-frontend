@@ -8,7 +8,7 @@ const Home = (props) => {
   const [ skateBoards, setSkateBoards ] = useState(null);
 
   const getSkateBoardsData = async () => {
-  const response = await fetch(props.URL + 'finishedboards');
+  const response = await fetch(props.URL + 'presets');
   const data = await response.json();
     setSkateBoards(data);
   };
