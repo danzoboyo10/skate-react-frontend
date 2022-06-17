@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from "react";
+import CardSmall from "../components/CardSmall";
+import Banner from "../components/Banner";
 
 const Home = (props) => {
 
   const [ skateBoards, setSkateBoards ] = useState(null);
+
   const getSkateBoardsData = async () => {
   const response = await fetch(props.URL + 'finishedboards');
   const data = await response.json();
@@ -12,12 +15,16 @@ const Home = (props) => {
   useEffect(() => { getSkateBoardsData() }, []);
 
   const loaded = () => {
-    return skateBoards.map((boards) => (
+    return (
       <>
-        <h1>{boards.board.name}</h1>
-        <section>{boards.board.price}</section>
+        <Banner />
+        <div className="cardSmall_wrapper">
+          <div className="cardSmall">
+            <CardSmall boards={skateBoards} />
+          </div>
+        </div>
       </>
-    ));
+    )
   };
 
   const loading = () => {

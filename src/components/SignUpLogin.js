@@ -1,7 +1,7 @@
 
 const SignUpLogin = () => {
   return (
-    <div>SignUpLogin</div>
+    <div className="signUpLogin">SignUpLogin</div>
   )
 }
 
