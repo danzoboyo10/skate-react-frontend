@@ -1,6 +1,6 @@
 .App {
   display: grid;
-  grid-template-rows: 96px 1fr 0.2fr;
+  grid-template-rows: 96px 1fr 0.05fr;
   grid-template-areas: 
     "header"
     "main"
@@ -17,15 +17,62 @@ header {
 
 main {
   grid-area: main;
-  margin: 20px 62px 0 62px;
+  margin: 20px 62px 62px 62px;
   min-height: 350px;
 
+  .main_wrapper {
+  }
+
+  .nav {
+    padding: 29px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "logos user";
+
+    .nav_logos {
+      grid-area: logos;
+      display: flex;
+      justify-content: flex-start;
+      gap: 40px;
+      height: 40px;
+      padding: 7px 0 0 0;
+    }
+    
+    .nav_user {
+      grid-area: user;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 25px;
+    }
+  }
+  
   .banner {
-    background-image: url("https://i.imgur.com/nOD9Jfi.png");
-    border-radius: 20px;
+    background-image: url("https://i.imgur.com/QnkZxGb.png");
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     height: 124px;
+    width: 100%;
+    margin: 36px 0 59px 0;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    .banner_text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+    }
+    .banner_text--tracking-in {
+      -webkit-animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
   }
 
   .cardSmall {
@@ -33,26 +80,27 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 50px;
-  }
-  
-  .cardSmall_card {
-    display: flex;
-    flex-direction: column;
-    background: #FFFFFF;
-    border: 1px solid #C5C5C5;
-    border-radius: 20px;
-    padding: 15px 60px 21px 60px;
-  }
-  
-  .cardSmall_card--img {
-    width: 118px;
-    height: 237px;
-  }
 
+    .cardSmall_card {
+      display: flex;
+      flex-direction: column;
+      background: #FFFFFF;
+      border: 1px solid #C5C5C5;
+      border-radius: 20px;
+      padding: 15px 60px 21px 60px;
+    }
+    
+    .cardSmall_card--img {
+      width: 118px;
+      height: 237px;
+    }
+  }
 }
 
 footer {
   grid-area: footer;
   display: flex;
   justify-content: center;
+  border-top: 1px solid #C5C5C5;
+  padding: 15px;
 }

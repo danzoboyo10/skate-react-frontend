@@ -13,10 +13,12 @@ const App = () => {
     <div className="App">
       <Header />
       <main> 
-      <Routes> 
-        <Route path="/" element={<Home URL={URL} />} exact/>
-        <Route path="/skateboards/:id" element={<Board URL={URL} />} />
-      </Routes>
+        <div className="main_wrapper">
+          <Routes> 
+            <Route path="/" element={<Home URL={URL} />} exact/>
+            <Route path="/skateboards/:id" element={<Board URL={URL} />} />
+          </Routes>
+        </div>
       </main>
       <Footer />
     </div>
