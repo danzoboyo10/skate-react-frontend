@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom'
 const Banner = () => {
   return (
     <div className="banner">
-      <Link to="/skateboards">Customize your board</Link>
+      <section className="banner_text">
+        <Link to="/skateboards">
+          <section className="banner_text--tracking-in">
+            Customize your board
+          </section>
+        </Link>
+      </section>
     </div>
   )
 }
