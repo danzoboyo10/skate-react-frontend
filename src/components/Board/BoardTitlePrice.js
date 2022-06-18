@@ -1,6 +1,6 @@
 const BoardTitlePrice = () => {
   return (
-    <div>BoardTitlePrice</div>
+    <div className="board-create--title-price">BoardTitlePrice</div>
   )
 }
 

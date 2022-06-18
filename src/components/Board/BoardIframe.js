@@ -1,6 +1,11 @@
+import BoardAccessories from "./BoardAccessories"
+
 const BoardIframe = () => {
   return (
-    <div>BoardIframe</div>
+    <div className="board-create--iframe">
+      <BoardAccessories />
+      <iframe></iframe>
+    </div>
   )
 }
 

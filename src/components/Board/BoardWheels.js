@@ -1,6 +1,6 @@
 const BoardWheels = () => {
   return (
-    <div>BoardWheels</div>
+    <div className="board-create--accessories-wheels">BoardWheels</div>
   )
 }
 

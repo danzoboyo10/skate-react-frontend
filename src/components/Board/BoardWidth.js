@@ -1,6 +1,6 @@
 const BoardWidth = () => {
   return (
-    <div>BoardWidth</div>
+    <div className="board-create--board-width">BoardWidth</div>
   )
 }
 

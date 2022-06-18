@@ -1,6 +1,6 @@
 const BoardTrucks = () => {
   return (
-    <div>BoardTrucks</div>
+    <div className="board-create--accessories-trucks">BoardTrucks</div>
   )
 }
 
