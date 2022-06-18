@@ -1,0 +1,152 @@
+.App {
+  display: grid;
+  grid-template-rows: 96px 1px 1fr 0.05fr;
+  grid-template-areas: 
+    "header"
+    "header-line"
+    "main"
+    "footer";
+}
+
+.emptyCol_1 {
+  grid-area: emptyCol_1;
+}
+  
+.emptyCol_2 {
+  grid-area: emptyCol_2;
+}
+
+.emptyCol_3 {
+  grid-area: emptyCol_3;
+}
+
+.header_wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 62px 1fr 1fr 62px;
+  grid-template-areas: 
+    "emptyCol_1 header-logo header-user emptyCol_2";
+  padding: 25px 0 25px 0;
+  justify-content: center;
+  align-items: end;
+  min-width: 1440px;
+  max-width: 1440px;
+}
+
+.header_logo {
+  grid-area: header-logo;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header_user {
+  grid-area: header-user;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+.header_line {
+  grid-area: header-line;
+  border-bottom: 1px solid rgb(32, 32, 32);
+}
+
+.main_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 62px 1fr 62px;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "emptyCol_1 board emptyCol_2";
+  max-width: 1440px;
+  min-height: 800px;
+}
+
+.board {
+  grid-area: board;
+  color: white;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 
+    "left right";
+  gap: 10px;
+  width: 1316px;
+  padding: 33px 0 0 0;
+}
+
+.board-leftDisplay {
+  grid-area: left;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.board-boardDisplay {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: 
+    "boardSmall boardBig";
+}
+
+.board-boardDisplay--smallContainer {
+  grid-area: boardSmall;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.board-boardDisplay--main {
+  grid-area: boardBig;
+  display: flex;
+  justify-content: center;
+}
+
+.board-rightDisplay {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.footer_wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+}
+
+footer {
+  grid-area: footer;
+  padding: 15px;
+  color: #BBBBBB;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: 62px 1fr 1fr 62px;
+  grid-template-areas: 
+    "emptyCol_1 footer-left footer-right emptyCol_2";
+  padding: 5px 0 25px 0;
+  justify-content: center;
+  align-items: end;
+  min-width: 1440px;
+  max-width: 1440px;
+}
+
+.footer-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

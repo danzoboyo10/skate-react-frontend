@@ -1,6 +1,6 @@
 const BoardDescription = () => {
   return (
-    <div>BoardDescription</div>
+    <div className="board-create--description">BoardDescription</div>
   )
 }
 

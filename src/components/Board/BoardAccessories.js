@@ -5,7 +5,11 @@ import BoardIframe from "./BoardIframe"
 
 const BoardAccessories = () => {
   return (
-    <div>BoardAccessories</div>
+    <div className="board-create--accessories">
+      <BoardWheels />
+      <BoardTrucks />
+      <BoardBearings />
+    </div>
   )
 }
 

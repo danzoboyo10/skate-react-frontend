@@ -1,6 +1,8 @@
 const BoardSmallB = () => {
   return (
-    <div>BoardSmallB</div>
+    <div className="board_boardDisplay--smallContainer--back">
+      BoardSmallB
+    </div>
   )
 }
 

@@ -1,6 +1,6 @@
 const BoardCart = () => {
   return (
-    <div>BoardCart</div>
+    <div className="board-create--cart">BoardCart</div>
   )
 }
 

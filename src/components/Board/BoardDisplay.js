@@ -4,7 +4,15 @@ import BoardMain from "./BoardMain"
 
 const BoardDisplay = () => {
   return (
-    <div>BoardDisplay</div>
+    <div className="board-boardDisplay">
+      <div className="board-boardDisplay--smallContainer">
+        <BoardSmallF />
+        <BoardSmallB />
+      </div>
+      <div className="board-boardDisplay--main">
+        <BoardMain />
+      </div>
+    </div>
   )
 }
 
