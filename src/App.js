@@ -21,6 +21,7 @@ const App = () => {
           <section className="emptyCol_2">&nbsp;</section>
             <Routes> 
               <Route path="/" element={<Home URL={URL} />} exact/>
+              <Route path="/skateboards" element={<Board URL={URL} />} />
               <Route path="/skateboards/:id" element={<Board URL={URL} />} />
             </Routes>
         </main>
