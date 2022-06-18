@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import CardSmall from "../components/CardSmall";
 import Banner from "../components/Banner";
-import Nav from "../components/Nav";
+import HomeLogos from "../components/HomeLogos";
 
 const Home = (props) => {
 
@@ -18,7 +18,7 @@ const Home = (props) => {
   const loaded = () => {
     return (
       <>
-        <Nav />
+        <HomeLogos />
         <Banner />
         <div className="cardSmall_wrapper">
           <div className="cardSmall">

@@ -11,16 +11,23 @@ const App = () => {
   
   return (
     <div className="App">
-      <Header />
-      <main> 
-        <div className="main_wrapper">
-          <Routes> 
-            <Route path="/" element={<Home URL={URL} />} exact/>
-            <Route path="/skateboards/:id" element={<Board URL={URL} />} />
-          </Routes>
-        </div>
-      </main>
-      <Footer />
+      <div className="header_wrapper">
+        <Header />
+      </div>
+      <div className="header_line"></div>
+      <div className="main_wrapper">
+        <main> 
+          <section className="emptyCol_1">&nbsp;</section>
+          <section className="emptyCol_2">&nbsp;</section>
+            <Routes> 
+              <Route path="/" element={<Home URL={URL} />} exact/>
+              <Route path="/skateboards/:id" element={<Board URL={URL} />} />
+            </Routes>
+        </main>
+      </div>
+      <div className="footer_wrapper">
+        <Footer />
+      </div>
     </div>
   );
 };

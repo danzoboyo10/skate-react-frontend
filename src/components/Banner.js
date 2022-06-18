@@ -5,7 +5,7 @@ const Banner = () => {
     <div className="banner">
       <section className="banner_text">
         <Link to="/skateboards">
-          <section className="banner_text--tracking-in">
+          <section className="banner_text--effect">
             Customize your board
           </section>
         </Link>
