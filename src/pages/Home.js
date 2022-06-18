@@ -5,15 +5,15 @@ import HomeLogos from "../components/HomeLogos";
 
 const Home = (props) => {
 
-  const [ skateBoards, setSkateBoards ] = useState(null);
-
-  const getSkateBoardsData = async () => {
+  const [ premadeBoards, setPremadeBoards ] = useState(null);
+  
+  const getPremadeBoardsData = async () => {
   const response = await fetch(props.URL + 'presets');
   const data = await response.json();
-    setSkateBoards(data);
+    setPremadeBoards(data);
   };
 
-  useEffect(() => { getSkateBoardsData() }, []);
+  useEffect(() => { getPremadeBoardsData() }, []);
 
   const loaded = () => {
     return (
@@ -22,7 +22,7 @@ const Home = (props) => {
         <Banner />
         <div className="cardSmall_wrapper">
           <div className="cardSmall">
-            <CardSmall boards={skateBoards} />
+            <CardSmall boards={premadeBoards} />
           </div>
         </div>
       </>
@@ -34,7 +34,7 @@ const Home = (props) => {
   };
 
   return (
-    skateBoards ? loaded() : loading()
+    premadeBoards ? loaded() : loading()
   );
 };
 
