@@ -6,7 +6,7 @@ const loaded = () => {
       {console.log(boards?.board?.name)} 
       <section className="cardSmall_card--name">{boards?.board?.name}</section>
       <section className="cardSmall_card--img"><img src={boards?.board?.bigImg} alt={boards?.board?.name}/></section>
-      <section className="cardSmall card--price">{boards?.board?.price}</section>
+      <section className="cardSmall card--price">${boards?.board?.price}</section>
     </div>
   ));
 
