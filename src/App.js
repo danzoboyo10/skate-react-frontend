@@ -26,9 +26,9 @@ const App = () => {
             </Routes>
         </main>
       </div>
-      <div className="footer_wrapper">
+      {/* <div className="footer_wrapper">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 };
