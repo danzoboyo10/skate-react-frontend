@@ -4,12 +4,12 @@ import BoardMain from "./BoardMain"
 
 const BoardDisplay = () => {
   return (
-    <div className="board-boardDisplay">
-      <div className="board-boardDisplay--smallContainer">
+    <div className="board-display">
+      <div className="board-display--small-container">
         <BoardSmallF />
         <BoardSmallB />
       </div>
-      <div className="board-boardDisplay--main">
+      <div className="board-display--main">
         <BoardMain />
       </div>
     </div>

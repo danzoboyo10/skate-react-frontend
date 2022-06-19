@@ -1,19 +1,19 @@
-import BoardTitlePrice from "./BoardTitlePrice"
-import BoardCart from "./BoardCart"
-import BoardDescription from "./BoardDescription"
-import BoardWidth from "./BoardWidth"
-import BoardIframe from "./BoardIframe"
-import { useState } from "react"
+import BoardTitlePrice from './BoardTitlePrice'
+import BoardCart from './BoardCart'
+import BoardDescription from './BoardDescription'
+import BoardWidth from './BoardWidth'
+import BoardIframe from './BoardIframe'
+import { useState } from 'react'
 
 const BoardCreate = (props) => {
-  const [newForm, setNewForm ] = useState({
-    name: "",
+  const [ newForm, setNewForm ] = useState({
+    name: '',
   });
 
   const handleChange = (event) => {
     setNewForm({
       ...newForm,
-      [event.targent.name]: event.target.value
+      [event.target.name]: event.target.value
     });
   };
 
@@ -25,6 +25,16 @@ const BoardCreate = (props) => {
   const loaded = () => {
     return (
       <div className="board-create">
+        <form onSubmit={handleSubmit}>
+          <input
+            value={newForm.name}
+            onChange={handleChange}
+            name="name"
+            placeholder="Name your board"
+            type="text"
+          />
+          <input type="submit" value="Create board" />
+        </form>
         <BoardTitlePrice />
         <BoardWidth />
         <BoardIframe />
@@ -39,18 +49,7 @@ const BoardCreate = (props) => {
   }
   
   return (
-    <section>
-      <form onSubmit={handleSubmit}>
-        <input
-          value={newForm.name}
-          onChange={handleChange}
-          name="name"
-          type="text"
-        />
-        <input type="submit" value="Create Skateboard" />
-      </form>
-      {props.board ? loaded() : loading()};
-    </section>
+    newForm ? loaded() : loading()
   )
 };
 
