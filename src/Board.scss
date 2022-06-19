@@ -1,42 +1,42 @@
-
 .board {
   color: white;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-areas: 
     "left right";
-  gap: 10px;
-  width: 1316px;
-  padding: 33px 0 0 0;
+  gap: 50px;
+  padding: 33px 0 33px 0;
+  max-width: 1316px;
+  
 }
 
-.board-leftDisplay {
+.board-left-display {
   grid-area: left;
   display: flex;
   justify-content: flex-start;
 }
 
-.board-boardDisplay {
+.board-display {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: 
     "boardSmall boardBig";
 }
 
-.board-boardDisplay--smallContainer {
+.board-display--small-container {
   grid-area: boardSmall;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.board-boardDisplay--main {
+.board-display--main {
   grid-area: boardBig;
   display: flex;
   justify-content: center;
 }
 
-.board-rightDisplay {
+.board-right-display {
   grid-area: right;
   display: flex;
   flex-direction: column;

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 const Banner = () => {
   return (
     <div className="banner">
-      <section className="banner_text">
+      <section className="banner-text">
         <Link to="/skateboards">
-          <section className="banner_text--effect">
+          <section className="banner-text--effect">
             Customize your board
           </section>
         </Link>

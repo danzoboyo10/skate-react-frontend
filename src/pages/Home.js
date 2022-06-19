@@ -20,10 +20,11 @@ const Home = (props) => {
       <>
         <HomeLogos />
         <Banner />
-        <div className="cardSmall_wrapper">
-          <div className="cardSmall">
-            <CardSmall boards={premadeBoards} />
-          </div>
+        <div className="card-small">
+          <CardSmall boards={premadeBoards} />
+          <div className="card-small--empty"></div>
+          <div className="card-small--empty"></div>
+          <div className="card-small--empty"></div>
         </div>
       </>
     )

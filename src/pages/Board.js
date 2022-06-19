@@ -6,14 +6,7 @@ import { useState } from "react"
 const Board = (props) => {
 
   const [ skateBoards, setSkateBoards ] = useState(null); 
-
-  const getBoards = async () => {
-    const response = await fetch(props.URL + 'all');
-    const data = await response.json();
-    setSkateBoards(data);
-  };
   
-
   const createBoards = async (board) => {
     await fetch(props.URL + 'create', {
       method: 'POST',
@@ -22,18 +15,15 @@ const Board = (props) => {
       },
       body: JSON.stringify(board),
     });
-    getBoards(); 
   }; 
-
-
 
   return (
     <div className="board">
-    <div className="board-leftDisplay"> 
+    <div className="board-left-display"> 
       <BoardDisplay />
     </div>
-    <div className="board-rightDisplay">
-      <BoardCreate createBoard={createBoards} board={skateBoards} />
+    <div className="board-right-display">
+      <BoardCreate createBoard={createBoards} />
     </div>
     </div>
   )
