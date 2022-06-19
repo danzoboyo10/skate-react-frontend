@@ -1,6 +1,6 @@
 const HomeLogos = () => {
   return (
-    <div className="homeLogos">
+    <div className="home-logos">
         <img src="https://i.imgur.com/26vYfCV.png" alt="nike" />
         <img src="https://i.imgur.com/05Fb4QG.png" alt="vans" />
         <img src="https://i.imgur.com/3obnEIm.png" alt="customsx" />
