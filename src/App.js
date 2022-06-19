@@ -1,9 +1,10 @@
 import './App.scss';
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, Link} from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './pages/Home';
-import Board from './pages/Board'
+import Board from './pages/Board';
+import SignUpLogin from './components/SignUpLogin';
 
 
 const App = () => {
@@ -12,7 +13,9 @@ const App = () => {
   return (
     <div className="App">
       <div className="header-wrapper">
-        <Header />
+        <Header >
+          <SignUpLogin />
+        </Header >
       </div>
       <div className="main-wrapper">
         <main> 
