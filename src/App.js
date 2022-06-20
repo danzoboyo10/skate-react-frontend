@@ -2,7 +2,7 @@ import './App.scss';
 import {Routes, Route, Link} from 'react-router-dom';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
-import Home from './Pages/Main/Home';
+import Home from './Pages/Home/Home';
 import Board from './Pages/Board/Board';
 import SignUpLogin from './Components/SignUpLogin';
 import Cart from './Pages/Cart/Cart';
