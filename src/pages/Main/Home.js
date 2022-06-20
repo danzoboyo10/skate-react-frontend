@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import CardSmall from "../components/CardSmall";
-import Banner from "../components/Banner";
-import HomeLogos from "../components/HomeLogos";
+import CardSmall from "./CardSmall";
+import Banner from "./Banner";
+import HomeLogos from "./HomeLogos";
 
 const Home = (props) => {
 

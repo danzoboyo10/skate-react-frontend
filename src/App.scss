@@ -22,6 +22,8 @@
   grid-area: header-wrapper;
   background-color: #000000;
   justify-items: center;
+  align-items: end;
+
 }
 
 header { 
@@ -32,13 +34,14 @@ header {
     "left right";
   max-width: 1316px;
   padding: 25px 0 25px 0;
+  margin: 0 0 -20px 0;
 }
 
 .header--logo {
   grid-area: left;
   display: flex;
   justify-content: flex-start;
-  padding-right: 580px;
+  padding-right: 500px;
 }
 
 .header--cart-user {
@@ -47,22 +50,30 @@ header {
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
+  align-items: flex-end;
 }
 
-.sign-up-login--wrapper {
+.header--dropdown-link {
+  background-color: #000;
+  cursor: pointer;
+  border: none;
+}
+
+.header--user-dropdown {
   position: relative;
 }
 
 .sign-up-login {
   position: absolute;
-  left: 0;
-  top: calc(100% + .25rem);
+  left: -183px;
+  top: calc(100% + .15rem);
   background-color: #252525;
-  padding: .75rem;
-  border-radius: .25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
   color: #FFFFFF;
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  min-height: 200px;
+  min-width: 218px;
 }
 
 .main-wrapper {  
