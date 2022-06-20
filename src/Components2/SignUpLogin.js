@@ -1,4 +1,3 @@
-
 const SignUpLogin = () => {
   return (
     <div className="sign-up-login">

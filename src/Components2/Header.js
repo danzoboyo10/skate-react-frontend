@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import SignUpLogin from "./SignUpLogin";
 import { useState } from 'react';
 
 const Header = (props) => {
