@@ -1,0 +1,26 @@
+.cart {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: 
+    "list payment";
+  gap: 20px;
+  max-width: 1316px;
+  padding: 25px 0 0 0;
+}
+
+.cart-list {
+  grid-area: list;
+  display: flex;
+  color: white;
+  border: 1px solid white;
+  padding: 25px;
+}
+
+.cart-payment {
+  grid-area: payment;
+  display: flex;
+  color: white;
+  min-width: 400px;
+  padding: 25px 0 25px 25px;
+  justify-content: flex-end;
+}

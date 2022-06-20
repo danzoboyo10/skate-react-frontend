@@ -1,6 +1,6 @@
-import BoardDisplay from "../components/Board/BoardDisplay"
-import BoardCreate from "../components/Board/BoardCreate"
-import '../Board.scss'
+import BoardDisplay from "./BoardDisplay"
+import BoardCreate from "./BoardCreate"
+import './Board.scss'
 import { useState } from "react"
 
 const Board = (props) => {
@@ -14,7 +14,7 @@ const Board = (props) => {
   }
   
   const createBoards = async (board) => {
-    await fetch(props.URL + 'create', {
+    await fetch(props.URL + 'custom', {
       method: 'POST',
       headers: {
         'Content-Type': 'Application/json',

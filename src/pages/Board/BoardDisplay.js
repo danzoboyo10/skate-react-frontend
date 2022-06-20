@@ -4,7 +4,7 @@ import BoardMain from "./BoardMain"
 
 const BoardDisplay = () => {
   return (
-    <div className="board-display">
+    <>
       <div className="board-display--small-container">
         <BoardSmallF />
         <BoardSmallB />
@@ -12,7 +12,7 @@ const BoardDisplay = () => {
       <div className="board-display--main">
         <BoardMain />
       </div>
-    </div>
+    </>
   )
 }
 
