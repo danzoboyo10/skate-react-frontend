@@ -6,7 +6,7 @@ const Banner = () => {
       <section className="banner-text">
         <Link to="/skateboards">
           <section className="banner-text--effect">
-            Customize your board
+            Create your own board
           </section>
         </Link>
       </section>
