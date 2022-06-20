@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom"
 import { useState } from 'react';
+// Firebase Import
+import { login, logout } from "../services/firebase";
 
 const Header = (props) => {
+  const photoStyles = {
+    borderRadius: '50%',
+    height: '2.5rem',
+    margin: '0 1rem'
+  }
 
   const [ open, setOpen ] = useState(false);
 
@@ -24,6 +31,23 @@ const Header = (props) => {
 
   return (
     <header>
+      <ul>
+        {
+          props.user
+          ? 
+          (
+            <>
+            <li className="greeting-list-item">Welocme, {props.user.displayName} 
+              <img src={props.user.photoURL}
+              style={photoStyles}
+             alt={props.user.displayName} /></li>
+          <li onClick={logout}>Logout</li>
+            </>
+          )
+          :
+           <li onClick={login}>Login</li>
+        }
+      </ul>
       <div className="header--logo">
         <Link to="/"><img src="https://i.imgur.com/8IxHRpV.png" alt="logo" /></Link>
       </div>
