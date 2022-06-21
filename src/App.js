@@ -36,7 +36,7 @@ const App = () => {
     <div className="App">
       <div className="header-wrapper">
         <Header >
-          <SignUpLogin />
+          <SignUpLogin user={user} />
         </Header >
       </div>
       <div className="main-wrapper">
