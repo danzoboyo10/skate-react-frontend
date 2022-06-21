@@ -16,10 +16,10 @@ const SignUpLogin = (props) => {
           ? 
           (
             <>
-            <li className="greeting-list-item">Welocme, {props.user.displayName} 
+            {/* <li className="greeting-list-item">Welocme, {props.user.displayName} 
               <img src={props.user.photoURL}
               style={photoStyles}
-             alt={props.user.displayName} /></li>
+             alt={props.user.displayName} /></li> */}
           <li onClick={logout}>Logout</li>
             </>
           )
