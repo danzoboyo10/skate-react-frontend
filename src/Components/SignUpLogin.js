@@ -16,15 +16,12 @@ const SignUpLogin = (props) => {
           ? 
           (
             <>
-            {/* <li className="greeting-list-item">Welocme, {props.user.displayName} 
-              <img src={props.user.photoURL}
-              style={photoStyles}
-             alt={props.user.displayName} /></li> */}
-          <li onClick={logout}>Logout</li>
+            <li className="greeting-list-item">Welocme, {props.user.displayName} </li>
+          <li className="user" onClick={logout}>Logout</li>
             </>
           )
           :
-           <li onClick={login}>Login</li>
+           <li className="user" onClick={login}>Login</li>
         }
       </ul>
     </div>
@@ -32,3 +29,8 @@ const SignUpLogin = (props) => {
 }
 
 export default SignUpLogin
+
+
+{/* <img src={props.user.photoURL}
+              style={photoStyles}
+             alt={props.user.displayName} className='user-image' */}
