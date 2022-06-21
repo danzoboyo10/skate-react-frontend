@@ -7,7 +7,7 @@ const Cart = (props) => {
   const [ cartItems, setCartItems ] = useState(null);
 
   const getCart = async () => {
-    const response = await fetch(props.URL + 'presets');
+    const response = await fetch(props.URL + 'cart');
     const data = await response.json();
       setCartItems(data);
     };

@@ -6,11 +6,15 @@ const CardSmall = (props) => {
     return props?.boards?.map((boards, index) => (
       <div className="card-small-card">
         <section className="card-small-card--name">
-          <Link key={boards._id} to={`/boards/${boards?._id}`} >
+          <Link className="card-small-card--name-link" to={`/boards/${boards?._id}`} >
             {boards?.name}
           </Link>
         </section>
-        <section className="card-small-card--img"><img src={boards?.boardId?.bigImg} alt={boards?.board?.name}/></section>
+        <section className="card-small-card--img">
+          <Link className="card-small-card--img-link" to={`/boards/${boards?._id}`} >
+            <img src={boards?.boardId?.bigImg} alt={boards?.board?.name}/>
+          </Link>
+        </section>
         <section className="card-small-card--price">${boards?.boardId?.price}</section>
       </div>
     ));

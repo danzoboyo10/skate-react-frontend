@@ -113,9 +113,7 @@ main {
   }
 
   img:hover {
-    // background: #1d1d1d;
     border-radius: 15px;
-    // border-bottom: 1px solid #999894;
     -webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
     animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
   }
@@ -170,35 +168,42 @@ main {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  padding: 15px 60px 21px 50px;
+  padding: 15px 50px 21px 50px;
   width: 107px;
   height: 300px;
   color: #999894;
   background-color: #2f2f2f;
 
-  img {
-    max-width: 100px;
-    max-height: 200px;
-  }
-
-  a{
+  .card-small-card--name-link{
     color: #999894;
     text-decoration: none;
   }
 
-  a:hover {
+  .card-small-card--name-link:hover {
     color: white;
     padding-bottom: 5px;
     border-bottom: 1px solid #999894;
   }
+
+  img {
+    max-width: 100px;
+    max-height: 200px;
+    padding: 20px 0 20px 0;
+  }
+
+  img:hover {
+    border-radius: 100px;
+    -webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  }
 }
 
 .card-small-card--name {
-  padding: 5px 0 20px 0;
+  padding: 5px 0 5px 0;
 }
 
 .card-small-card--price {
-  padding: 15px 0 0 0;
+  padding: 5px 0 0 0;
 }
 
 .footer-wrapper {  

@@ -13,15 +13,15 @@ const SignUpLogin = (props) => {
       <ul>
         {
           props.user
-          ? 
-          (
-            <>
-            <li className="greeting-list-item">Welocme, {props.user.displayName} </li>
-          <li className="user" onClick={logout}>Logout</li>
-            </>
-          )
-          :
-           <li className="user" onClick={login}>Login</li>
+            ? 
+              (
+                <>
+                  <li className="greeting-list-item">Welocme, {props.user.displayName} </li>
+                  <li className="user" onClick={logout}>Logout</li>
+                </>
+              )
+            :
+              <li className="user" onClick={login}>Login</li>
         }
       </ul>
     </div>
