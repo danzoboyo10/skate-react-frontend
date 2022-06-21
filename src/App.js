@@ -24,6 +24,17 @@ const App = () => {
       setPremadeBoards(data);
   };
 
+  const createPremadeBoards = async (board) => {
+    await fetch(URL + 'cart', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'Application/json'
+      },
+      body: JSON.stringify(board)
+    });
+    getPremadeBoardsData();
+  }
+
   useEffect(() => {
     const unsub = auth.onAuthStateChanged(user => setUser(user));
     // Clear from memory
@@ -43,7 +54,13 @@ const App = () => {
         <main> 
           <Routes> 
             <Route path="/" element={<Home URL={URL} />} exact/>
-            <Route path="/boards/:id" element={<PremadeShow getBoards={getPremadeBoardsData} boards={premadeBoards} URL={URL} />} exact/>
+            <Route path="/boards/:id" element={
+              <PremadeShow 
+                createBoards={createPremadeBoards}
+                getBoards={getPremadeBoardsData} 
+                boards={premadeBoards} 
+                URL={URL} 
+              />} exact/>
             <Route path="/createboard" element={<Board URL={URL} />} />
             <Route path="/cart" element={<Cart URL={URL} />} />
           </Routes>

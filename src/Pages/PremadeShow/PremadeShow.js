@@ -9,6 +9,14 @@ const PremadeShow = (props) => {
   const { id } = useParams();
   const premade = props?.boards?.find((board) => board._id === id);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.createBoards({
+      premade: premade._id,
+      quantity: 20
+    });
+  }
+
   const loaded = () => {
     return (
       <div className="premade-show">
@@ -44,6 +52,11 @@ const PremadeShow = (props) => {
           <section className="premade-show--wheel">
             {premade.wheelId.name}
             $ {premade.wheelId.price}
+          </section>
+          <section className="premade-show--add-to-cart">
+            <form onSubmit={handleSubmit}>
+              <input type="submit" value="Add to cart" />
+            </form>
           </section>
         </div>
       </div>
