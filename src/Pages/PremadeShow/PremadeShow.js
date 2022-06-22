@@ -10,7 +10,7 @@ const PremadeShow = (props) => {
   const premade = props?.boards?.find((board) => board._id === id);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    props.history.push('/cart');
     props.createBoards({
       premade: premade._id,
       quantity: 20
@@ -59,6 +59,7 @@ const PremadeShow = (props) => {
             </form>
           </section>
         </div>
+        <div className="min-height"></div>
       </div>
     )
   }

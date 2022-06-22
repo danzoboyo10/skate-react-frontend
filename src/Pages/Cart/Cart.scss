@@ -10,17 +10,39 @@
 
 .cart-list {
   grid-area: list;
-  display: flex;
-  color: white;
-  border: 1px solid white;
+  border: 1px solid #999894;
+  border-radius: 25px;
   padding: 25px;
+}
+
+.cart-items--list {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: 
+    "name delete";
+  gap: 20px;
+  padding: 25px;
+}
+
+.cart-items--list-name {
+  grid-area: name;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #999894;
+}
+
+.cart-items--list-delete {
+  grid-area: delete;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .cart-payment {
   grid-area: payment;
   display: flex;
-  color: white;
+  color: #999894;
   min-width: 400px;
-  padding: 25px 0 25px 25px;
   justify-content: flex-end;
+  border: 1px solid #999894;
+  border-radius: 25px;
+  padding: 25px;
 }

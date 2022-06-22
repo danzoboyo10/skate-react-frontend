@@ -6,19 +6,25 @@ const Cart = (props) => {
   
   const [ cartItems, setCartItems ] = useState(null);
 
-  const getCart = async () => {
+  const getCartData = async () => {
     const response = await fetch(props.URL + 'cart');
     const data = await response.json();
       setCartItems(data);
     };
 
-  useEffect(() => { getCart() }, []);
+  const deleteCartItem = async (id) => {
+    await fetch(props.URL + 'cart/' + id, { method: 'DELETE' });
+    getCartData();
+  }
+
+  useEffect(() => { getCartData() }, []);
 
   return (
     <div className="cart">
       <div className="cart-list">
         <CartItems 
           cartItems={cartItems} 
+          deleteCartItems={deleteCartItem}
         />
       </div>
       <div className="cart-payment">
