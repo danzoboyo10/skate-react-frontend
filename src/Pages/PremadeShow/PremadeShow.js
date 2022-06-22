@@ -10,11 +10,12 @@ const PremadeShow = (props) => {
   const premade = props?.boards?.find((board) => board._id === id);
 
   const handleSubmit = (e) => {
-    props.history.push('/cart');
+    e.preventDefault();
     props.createBoards({
       premade: premade._id,
       quantity: 20
     });
+    props.history.push('/cart');
   }
 
   const loaded = () => {
