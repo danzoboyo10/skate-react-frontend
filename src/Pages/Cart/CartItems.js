@@ -12,8 +12,11 @@ const CartItems = (props) => {
   const loaded = () => {
     return props.cartItems.map((items) => (
       <div className="cart-items--list">
+        <section className="cart-items--list-img">
+          <img src={items.buildId.boardId.bigImg} />
+        </section>
         <section className="cart-items--list-name">
-          {items.buildId}<br></br>
+          {items.buildId.name}
         </section>
         <section className="cart-items--list-delete">
           <button onClick={() => handleRemoveCartItem(items._id)}>Delete</button>

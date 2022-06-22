@@ -47,11 +47,14 @@
   grid-area: right;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
+  align-items: flex-start;
   min-width: 400px;
   color: #999894;
   border: 1px solid #999894;
   border-radius: 25px;
   padding: 25px;
+}
+
+.premade-show--name {
+  
 }
