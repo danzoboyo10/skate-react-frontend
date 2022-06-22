@@ -8,15 +8,7 @@ const Board = (props) => {
   const [ skateBoards, setSkateBoards ] = useState(null); 
 
   const getBoards = async (board) => {
-    const token = await props.user.getIdToken();
-    console.log(token)
-    const response = await fetch(props.URL + 'create', {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer ' + token
-      }
-
-    });
+    const response = await fetch(props.URL + 'create');
     const data = await response.json();
     setSkateBoards(data);
   }
@@ -46,4 +38,3 @@ const Board = (props) => {
 }
 
 export default Board
-
