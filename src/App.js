@@ -13,7 +13,8 @@ import PremadeShow from './Pages/PremadeShow/PremadeShow';
 
 
 const App = () => {
-  const URL = 'https://skate-react.herokuapp.com/'
+  // const URL = 'https://skate-react.herokuapp.com/'
+  const URL = 'http://localhost:4000/all';
 
   const [ user, setUser ] = useState(null);
   const [ premadeBoards, setPremadeBoards ] = useState(null);
@@ -59,9 +60,9 @@ const App = () => {
                 createBoards={createPremadeBoards}
                 getBoards={getPremadeBoardsData} 
                 boards={premadeBoards} 
-                URL={URL} 
+                URL={URL}
               />} exact/>
-            <Route path="/createboard" element={<Board URL={URL} />} />
+            <Route path="/createboard" element={<Board URL={URL} user={user} />} />
             <Route path="/cart" element={<Cart URL={URL} />} />
           </Routes>
         </main>
