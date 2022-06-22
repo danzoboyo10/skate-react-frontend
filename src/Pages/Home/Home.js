@@ -8,7 +8,6 @@ const Home = (props) => {
   const [ premadeBoards, setPremadeBoards ] = useState(null);
   
   const getPremadeBoardsData = async () => {
-    // if(!props.user) return;
   const response = await fetch(props.URL + 'all');
   const data = await response.json();
     setPremadeBoards(data);
