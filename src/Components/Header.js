@@ -26,12 +26,12 @@ const Header = (props) => {
   return (
     <header>
       <div className="header--logo">
-        <Link to="/"><img src="https://i.imgur.com/8IxHRpV.png" alt="logo" /></Link>
+        <Link to="/"><img src="https://i.imgur.com/wfQyPeZ.png" alt="logo" /></Link>
       </div>
       <div className="header--cart-user">
-        <Link to="/cart"><img src="https://i.imgur.com/LcCK06L.png" alt="cart" /></Link>
+        <Link to="/cart"><img src="https://i.imgur.com/cxLq5Z8.png" alt="cart" /></Link>
         <div className="header--user-dropdown" data-dropdown>
-          <button className="header--dropdown-link" onClick={() => setOpen(!open)} data-dropdown-button><img src="https://i.imgur.com/h75LHQo.png" alt="user" /></button>
+          <button className="header--dropdown-link" onClick={() => setOpen(!open)} data-dropdown-button><img src="https://i.imgur.com/0gSbNQ7.png" alt="user" /></button>
           {open && props.children}
         </div>
       </div>
