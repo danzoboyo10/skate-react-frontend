@@ -46,7 +46,7 @@
 .premade-show--list {
   grid-area: right;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   min-width: 400px;
   color: #999894;
@@ -55,6 +55,5 @@
   padding: 25px;
 }
 
-.premade-show--name {
-  
+.premade-show--board-right {
 }
