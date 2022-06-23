@@ -1,10 +1,11 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './PremadeShow.scss'
 
 const PremadeShow = (props) => {
 
   useEffect(() => { props.getBoards(); }, []);
+  const history = useNavigate();
 
   const { id } = useParams();
   const premade = props?.boards?.find((board) => board._id === id);
@@ -15,7 +16,7 @@ const PremadeShow = (props) => {
       premade: premade._id,
       quantity: 20
     });
-    props.history.push('/cart');
+    history('/cart');
   }
 
   const loaded = () => {
