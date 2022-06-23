@@ -1,12 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const CartItems = (props) => {
   console.log(props)
   const { id } = useParams();
+  const history = useNavigate();
 
   const handleRemoveCartItem = (id) => {
     props.deleteCartItems(id);
-    props.history.push('/cart');
+    history('/cart');
   };
 
   const loaded = () => {
