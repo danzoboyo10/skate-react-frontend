@@ -11,7 +11,7 @@ const Cart = (props) => {
     if(!props.user) return;
     // JSON Web Token AKA JWT - edited at 4:30pm
     const token = await props.user.getIdToken();
-    console.log(token);
+    // console.log(token);
     const response = await fetch(URL, {
       method: 'GET', // edited at 4:30pm
       headers: {
