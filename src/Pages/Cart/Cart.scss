@@ -18,10 +18,16 @@
 .cart-items--list {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 0.1fr;
   grid-template-areas: 
-    "img name delete";
+    "img name delete"
+    "hr hr hr";
   gap: 20px;
   padding: 25px;
+}
+
+.hr {
+  grid-area: hr;
   border-bottom: 1px solid #999894;
 }
 
@@ -53,7 +59,6 @@
   align-items: flex-start;
   color: #999894;
   min-width: 400px;
-  justify-content: flex-end;
   border: 1px solid #999894;
   border-radius: 25px;
   padding: 25px;

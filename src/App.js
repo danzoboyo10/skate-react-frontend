@@ -13,7 +13,8 @@ import PremadeShow from './Pages/PremadeShow/PremadeShow';
 
 
 const App = () => {
-  const URL = 'https://skate-react.herokuapp.com/'
+  // const URL = 'https://skate-react.herokuapp.com/'
+  const URL = 'http://localhost:4000/'
 
   const [ user, setUser ] = useState(null);
   const [ premadeBoards, setPremadeBoards ] = useState(null);
@@ -40,20 +41,22 @@ const App = () => {
     // Clear from memory
     return () => {
       unsub();
-    }
-  }, [])
+    };
+  }, []);
   
   return (
     <div className="App">
       <div className="header-wrapper">
         <Header >
-          <SignUpLogin user={user} />
+          <SignUpLogin 
+            user={user} 
+          />
         </Header >
       </div>
       <div className="main-wrapper">
         <main> 
           <Routes> 
-            <Route path="/" element={<Home URL={URL} />} exact/>
+            <Route path="/" element={<Home user={user} URL={URL} />} exact/>
             <Route path="/boards/:id" element={
               <PremadeShow 
                 createBoards={createPremadeBoards}
@@ -62,7 +65,10 @@ const App = () => {
                 URL={URL} 
               />} exact/>
             <Route path="/createboard" element={<Board URL={URL} />} />
-            <Route path="/cart" element={<Cart URL={URL} />} />
+            <Route path="/cart" element={
+            <Cart 
+              user={user}
+            />} />
           </Routes>
         </main>
       </div>

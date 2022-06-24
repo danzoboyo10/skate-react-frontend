@@ -1,7 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 
 const CartItems = (props) => {
-  console.log(props)
   const { id } = useParams();
   const history = useNavigate();
 
@@ -13,21 +12,27 @@ const CartItems = (props) => {
   const loaded = () => {
     return props.cartItems.map((items) => (
       <div className="cart-items--list">
-        <section className="cart-items--list-img">
+        {props.user && // short-circuit
+          <>
+          <section className="cart-items--list-img">
           <img src={items.buildId.boardId.bigImg} />
-        </section>
-        <section className="cart-items--list-name">
-          {items.buildId.name}
-        </section>
-        <section className="cart-items--list-delete">
-          <button onClick={() => handleRemoveCartItem(items._id)}>Delete</button>
-        </section>
+          </section>
+          <section className="cart-items--list-name">
+            {items.buildId.name}
+          </section>
+          <section className="cart-items--list-delete">
+            <button onClick={() => handleRemoveCartItem(items._id)}>Delete</button>
+          </section>
+          <div className="hr">
+          </div>
+          </>
+        }
       </div>
     ));
   };
 
   const loading = () => {
-    return <h1>Loading...</h1>
+    return <h1>Login to view cart</h1>
   };
 
   return props.cartItems ? loaded() : loading();

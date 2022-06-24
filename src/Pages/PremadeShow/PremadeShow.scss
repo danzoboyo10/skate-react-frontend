@@ -43,17 +43,23 @@
   }
 }
 
-.premade-show--list {
+.premade-show--list-wrapper {
   grid-area: right;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: column;
   min-width: 400px;
   color: #999894;
   border: 1px solid #999894;
   border-radius: 25px;
   padding: 25px;
+
+  h2 {
+    color: #ffffff;
+    border-bottom: 1px solid #999894;
+    padding-bottom: 5px;
+  }
 }
 
-.premade-show--board-right {
+.premade-show--add-to-cart {
+  padding-top: 20px;
 }
