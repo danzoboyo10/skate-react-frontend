@@ -35,37 +35,32 @@ const PremadeShow = (props) => {
             <img src={premade.boardId.bigImg} />
           </section>
         </div>
-        <div className="premade-show--list">
-          <div className="premade-show--list-wrapper">
-            <section className="premade-show--name">
-              {premade.name}
-            </section>
-            <section className="premade-show--board">
-              <section>
-                {premade.boardId.name}
-              </section>
-              <section className="premade-show--right">
-                $ {premade.boardId.price}
-              </section>
-            </section>
-            <section className="premade-show--bearing">
-              {premade.bearingId.name}
-              $ {premade.bearingId.price}
-            </section>
-            <section className="premade-show--truck">
-              {premade.truckId.name}
-              $ {premade.truckId.price}
-            </section>
-            <section className="premade-show--wheel">
-              {premade.wheelId.name}
-              $ {premade.wheelId.price}
-            </section>
-            <section className="premade-show--add-to-cart">
+        <div className="premade-show--list-wrapper">
+
+            <h2>{premade.name}</h2>
+            <div className="premade-show--board">
+              {premade.boardId.name}&nbsp;&nbsp;
+              ${premade.boardId.price}
+            </div>
+            <div className="premade-show--bearing">
+              {premade.bearingId.name}&nbsp;&nbsp;
+              ${premade.bearingId.price}
+            </div>
+            <div className="premade-show--truck">
+              {premade.truckId.name}&nbsp;&nbsp;
+              ${premade.truckId.price}
+            </div>
+            <div className="premade-show--wheel">
+              {premade.wheelId.name}&nbsp;&nbsp;
+              ${premade.wheelId.price}
+            </div>
+            <div className="premade-show--add-to-cart">
               <form onSubmit={handleSubmit}>
                 <input type="submit" value="Add to cart" />
               </form>
-            </section>
-          </div>
+            </div>
+
+
         </div>
         <div className="min-height"></div>
       </div>

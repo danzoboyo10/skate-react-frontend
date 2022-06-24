@@ -72,10 +72,11 @@ header {
 
 .sign-up-login {
   position: absolute;
-  left: -183px;
+  left: -150px;
   top: calc(100% + .15rem);
   background-color: #252525;
-  padding: 1.5rem;
+  padding-right: 15px;
+  padding-top: 10px;
   border-radius: 1rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
   color: #FFFFFF;
@@ -183,7 +184,7 @@ main {
   .card-small-card--name-link:hover {
     color: white;
     padding-bottom: 5px;
-    border-bottom: 1px solid #999894;
+    // border-bottom: 1px solid #999894;
   }
 
   img {
