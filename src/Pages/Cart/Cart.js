@@ -24,7 +24,7 @@ const Cart = (props) => {
 
   const deleteCartItem = async (id) => {
     if(!props.user) return;
-    await fetch(URL + id, { method: 'DELETE' });
+    await fetch(URL + '/' + id, { method: 'DELETE' });
     getCartData();
   }
 
