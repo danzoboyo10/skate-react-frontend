@@ -13,8 +13,8 @@ import PremadeShow from './Pages/PremadeShow/PremadeShow';
 
 
 const App = () => {
-  // const URL = 'https://skate-react.herokuapp.com/'
-  const URL = 'http://localhost:4000/'
+  const URL = 'https://skate-react.herokuapp.com/'
+  // const URL = 'http://localhost:4000/'
 
   const [ user, setUser ] = useState(null);
   const [ premadeBoards, setPremadeBoards ] = useState(null);

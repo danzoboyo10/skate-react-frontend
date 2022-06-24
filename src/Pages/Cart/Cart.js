@@ -5,7 +5,7 @@ import CartItems from './CartItems';
 const Cart = (props) => {
   
   const [ cartItems, setCartItems ] = useState(null);
-  const URL = 'http://localhost:4000/cart'
+  const URL = 'https://skate-react.herokuapp.com/cart'
 
   const getCartData = async () => {
     if(!props.user) return;
