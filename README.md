@@ -27,7 +27,7 @@ A fun and interactive single page skateboard shop web application, using the MER
 ## Getting Started 
 https://trello.com/b/vVKCx4Ir/project-3
 
-Backend Repository <a href ="https://github.com/danzoboyo10/skate-react-backend" target="_blank"/> here </a> to see the deployed app!
+Backend Repository <a href ="https://github.com/danzoboyo10/skate-react-backend" target="_blank"/> </a> 
 Click <a href ="https://skate-react.netlify.app/" target="_blank"/> here </a> to see the deployed app!
 
 ## Unsolved Problems
