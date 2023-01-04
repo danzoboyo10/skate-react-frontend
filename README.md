@@ -5,7 +5,6 @@
 ## All of our code is still attached and we still encourage you to check out our front-end and back-end code linked in our respositories while this issue is being addressed. Thank you. 
 
 ## Skate React
-## Test
 ## Introduction: 
 A fun and interactive single page skateboard shop web application, using the MERN stack, that has create, read, and delete user functionality. 
 
