@@ -45,4 +45,3 @@ Click <a href ="https://skate-react.netlify.app/" target="_blank"/> here </a> to
 
 
 
-# skate-react-front-end
